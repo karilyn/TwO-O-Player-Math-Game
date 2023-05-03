@@ -1,5 +1,5 @@
 class Player
-  attr_accessor :name, :lives
+  attr_reader :name, :lives
 
   def initialize(name)
     @name = gets.chomp
@@ -12,15 +12,6 @@ class Player
 
   def is_dead?
     @lives == 0
-  end
-
-
-
-  def ask_question
-    question = Question.new
-    question.ask_question(@name)
-    input = gets.chomp.to_i
-    question.check_answer(input)
   end
 
 end
