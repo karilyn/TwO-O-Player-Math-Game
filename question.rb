@@ -1,21 +1,17 @@
 class Question
-  def initialize(num1, num2, answer)
+
+  def initialize
     @num1 = rand(1..20)
     @num2 = rand(1..20)
-    @sum = @num1 + @num2
+    @answer = @num1 + @num2
   end
 
-  def ask_question(name)
-    puts "#{name}: What does #{@num1} plus #{@num2} equal?"
+  def prompt
+    "What does #{@num1} plus #{@num2} equal?"
   end
 
-  def check_answer(input)
-    if input == @sum
-      puts "YES! You are correct."
-    else
-      puts "Seriously? No!"
-    end
+  def check_answer(user_input)
+    user_input == @answer
   end
-end
 
-# Path: main.rb
+ end
