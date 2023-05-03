@@ -2,7 +2,7 @@ class Player
   attr_reader :name, :lives
 
   def initialize(name)
-    @name = gets.chomp
+    @name = name
     @lives = 3
   end
 
